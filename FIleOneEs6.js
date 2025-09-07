@@ -1,3 +1,4 @@
+// A simple object with a method
 const obj = {
     name: "ganza",
     city: "kigali",
@@ -8,18 +9,29 @@ const obj = {
 };
 obj.greet();
 
+// ---
+
+// Iterating over an array using a for...of loop
 const arr = [12, 87, 70, 98, 43];
-for (const index of arr) {
-    console.log(index);
+console.log("\nArray elements:");
+for (const element of arr) {
+    console.log(element);
 }
 
+// ---
+
+// Using a function with rest parameters
 function restparameter(...items) {
+    console.log("\nRest parameters output:");
     for (const itm of items) {
         console.log(itm);
     }
 }
 restparameter(12, 34, 67, 9, 87);
 
+// ---
+
+// A class to manage a study group
 class LearnTogether {
     constructor() {
         this.members = [];
@@ -49,8 +61,17 @@ class LearnTogether {
 }
 
 const studyGroup = new LearnTogether();
+console.log("\nStudy Group Members:");
 studyGroup.addMember('Alice', 'JavaScript');
 studyGroup.addMember('Bob', 'Python');
 studyGroup.displayMembers();
 studyGroup.removeMember('Alice');
 studyGroup.displayMembers();
+
+// ---
+
+// Creating and iterating over a Set
+const setvalues = new Set(['apple', 'banana', 'orange']);
+const iterator = setvalues.values();
+console.log("\nSet iterator value:");
+console.log(iterator.next().value);
